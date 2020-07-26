@@ -20,7 +20,7 @@ namespace Vic.SportsStore.WebApp
             builder.RegisterControllers(typeof(MvcApplication).Assembly).PropertiesAutowired();
 
             //
-            builder.RegisterInstance<IProductsRepository>(new InMemoryProductRepository()).PropertiesAutowired();
+            builder.RegisterInstance<IProductsRepository>(new EFProductRepository()).PropertiesAutowired();
 
             //把这个盒子告诉框架，以后用这个盒子解析
             var container = builder.Build();
