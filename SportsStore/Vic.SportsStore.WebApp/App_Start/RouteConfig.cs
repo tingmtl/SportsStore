@@ -13,6 +13,7 @@ namespace Vic.SportsStore.WebApp
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //先匹配第一个，如果第一个不匹配才看是不是匹配第二个
             routes.MapRoute(
             name: null,
             url: "Page{page}",
