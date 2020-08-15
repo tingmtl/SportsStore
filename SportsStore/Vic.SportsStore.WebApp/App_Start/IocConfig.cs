@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using Vic.SportsStore.Domain.Abstract;
 using Vic.SportsStore.Domain.Concrete;
+using Vic.SportsStore.Domain.Entities;
 
 namespace Vic.SportsStore.WebApp
 {
@@ -21,6 +22,8 @@ namespace Vic.SportsStore.WebApp
 
             //
             builder.RegisterInstance<IProductsRepository>(new EFProductRepository()).PropertiesAutowired();
+
+            builder.RegisterInstance<IOrderProcessor>(new EmailOrderProcessor(new EmailSettings()));
 
             //把这个盒子告诉框架，以后用这个盒子解析
             var container = builder.Build();
