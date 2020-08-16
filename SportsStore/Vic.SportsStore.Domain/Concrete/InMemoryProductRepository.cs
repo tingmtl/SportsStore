@@ -10,6 +10,10 @@ namespace Vic.SportsStore.Domain.Concrete
 {
     public class InMemoryProductRepository : IProductsRepository
     {
+        public void SaveProduct(Product product)
+        {
+
+        }
         private List<Product> _products = new List<Product>
         {
             new Product { Name = "Football", Price = 25 },
