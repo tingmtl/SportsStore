@@ -82,6 +82,7 @@
     <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\CartLine.cs" />
     <Compile Include="Entities\EmailSettings.cs" />
+    <Compile Include="Entities\LoginUser.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShippingDetails.cs" />
     <Compile Include="Migrations\202007262000188_InitialCreate.cs" />
@@ -91,6 +92,14 @@
     <Compile Include="Migrations\202008161936577_ProductionRev1.cs" />
     <Compile Include="Migrations\202008161936577_ProductionRev1.designer.cs">
       <DependentUpon>202008161936577_ProductionRev1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008162052593_ProcuctRecv2.cs" />
+    <Compile Include="Migrations\202008162052593_ProcuctRecv2.designer.cs">
+      <DependentUpon>202008162052593_ProcuctRecv2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202008162126310_AddLoginUsers.cs" />
+    <Compile Include="Migrations\202008162126310_AddLoginUsers.designer.cs">
+      <DependentUpon>202008162126310_AddLoginUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008161936577_ProductionRev1.resx">
       <DependentUpon>202008161936577_ProductionRev1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008162052593_ProcuctRecv2.resx">
+      <DependentUpon>202008162052593_ProcuctRecv2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008162126310_AddLoginUsers.resx">
+      <DependentUpon>202008162126310_AddLoginUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

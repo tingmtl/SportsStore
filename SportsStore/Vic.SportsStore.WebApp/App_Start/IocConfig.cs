@@ -8,6 +8,8 @@ using System.Web.Mvc;
 using Vic.SportsStore.Domain.Abstract;
 using Vic.SportsStore.Domain.Concrete;
 using Vic.SportsStore.Domain.Entities;
+using Vic.SportsStore.WebApp.Infrastructure.Abstract;
+using Vic.SportsStore.WebApp.Infrastructure.Contrete;
 
 namespace Vic.SportsStore.WebApp
 {
@@ -24,6 +26,10 @@ namespace Vic.SportsStore.WebApp
             builder.RegisterInstance<IProductsRepository>(new EFProductRepository()).PropertiesAutowired();
 
             builder.RegisterInstance<IOrderProcessor>(new EmailOrderProcessor(new EmailSettings()));
+
+            builder.RegisterInstance<IAuthProvider>(new DBAuthProvider()).PropertiesAutowired();
+
+            builder.RegisterInstance<EFDbContext>(new EFDbContext()).PropertiesAutowired();
 
             //把这个盒子告诉框架，以后用这个盒子解析
             var container = builder.Build();
