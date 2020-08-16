@@ -12,8 +12,14 @@ namespace Vic.SportsStore.Domain.Concrete
     {
         public void SaveProduct(Product product)
         {
-
+            throw new NotImplementedException();
         }
+
+        public Product DeleteProduct(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
         private List<Product> _products = new List<Product>
         {
             new Product { Name = "Football", Price = 25 },
